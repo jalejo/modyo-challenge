@@ -1,14 +1,15 @@
-import { useState } from 'react'
-
 import './App.css'
+import CardsGrid from './components/CardsGrid'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <div className="container mx-auto">
 
       <h1>Match Modyo</h1>
+
+      <CardsGrid />
 
     </div>
   )
