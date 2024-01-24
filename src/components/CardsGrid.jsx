@@ -22,8 +22,13 @@ const CardsGrid = () => {
 
                 const jsonAnimalsData = await response.json();
 
-                const randomAnimals = getRandomAnimals( jsonAnimalsData.entries, 8 );
-                setAnimalsList( randomAnimals ); 
+                const randomAnimals = getRandomAnimals( jsonAnimalsData.entries, 9 );
+
+                const joinedArrays = [...randomAnimals, ...randomAnimals];
+                
+                const gridAnimals = getRandomAnimals( joinedArrays, 18 )
+
+                setAnimalsList( gridAnimals ); 
 
             } catch ( error ){
                 console.error("Error getting cards:", error );
@@ -41,14 +46,19 @@ const CardsGrid = () => {
 
     return(
         <div>
-            grid
+            <div className="grid grid-cols-6">
             {
-                
-                animalsList.map((animal) => (
-                    <div key={animal.fields.image.uuid}>{animal.fields.image.title}</div>
+                animalsList.map((animal, index) => (
+                    <div key={`${animal.fields.image.uuid}-${index}`}>
+                        {animal.fields.image.title}
+                        <img 
+                            src={animal.fields.image.url}
+                            alt={animal.fields.image.title}
+                        />
+                    </div>
                 ))
             }
-            <Card />
+            </div>
         </div>
     )
 }

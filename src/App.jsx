@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="container mx-auto">
-
+      
       <h1>Match Modyo</h1>
 
       <CardsGrid />
