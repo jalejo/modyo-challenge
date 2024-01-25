@@ -58,7 +58,8 @@ function App() {
 
   const handleCard =  animal  => {
 
-    if (flippingCard) return;
+    if ( animal.flipped ) return;
+    if ( flippingCard ) return;
 
     
     const handledIndex = animal.index;
@@ -69,6 +70,7 @@ function App() {
 
     selectedCard === null ? setSelectedCard( animal ) :
     selectedCard.uuid === animal.uuid ? setSelectedCard( null ) 
+    //selectedCard.index === animal.index ? setSelectedCard( animal )
     :( 
       setFlippingCard(true),
       setTimeout(() => {
@@ -79,7 +81,7 @@ function App() {
         setAnimalsList( updatedAnimalsList );
         setSelectedCard( null );
         setFlippingCard( false );
-      }, 1500)
+      }, 1000)
     )
   }
 
