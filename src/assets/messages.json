@@ -1,0 +1,200 @@
+{
+    "match": [
+        {
+            "message": "Super Match!",
+            "type": "game/play",
+            "emoji": "🎉"
+        },
+        {
+            "message": "Fantastic Pair!",
+            "type": "game/play",
+            "emoji": "👏"
+        },
+        {
+            "message": "Bravo!",
+            "type": "game/play",
+            "emoji": "🌟"
+        },
+        {
+            "message": "Marvelous Match!",
+            "type": "game/play",
+            "emoji": "😍"
+        },
+        {
+            "message": "Perfecto!",
+            "type": "game/play",
+            "emoji": "🥳"
+        },
+        {
+            "message": "Spot On!",
+            "type": "game/play",
+            "emoji": "🎈"
+        },
+        {
+            "message": "Excellent Pairing!",
+            "type": "game/play",
+            "emoji": "🤩"
+        },
+        {
+            "message": "Awesome Match!",
+            "type": "game/play",
+            "emoji": "🚀"
+        },
+        {
+            "message": "You Nailed It!",
+            "type": "game/play",
+            "emoji": "💪"
+        },
+        {
+            "message": "Terrific Duo!",
+            "type": "game/play",
+            "emoji": "😎"
+        }
+    ],
+    "miss": [
+        {
+            "message": "Oopsie!",
+            "type": "game/play",
+            "emoji": "💩"
+        },
+        {
+            "message": "Not Quite!",
+            "type": "game/play",
+            "emoji": "🤔"
+        },
+        {
+            "message": "Whoops!",
+            "type": "game/play",
+            "emoji": "🫨"
+        },
+        {
+            "message": "Near, yet not quite there!",
+            "type": "game/play",
+            "emoji": "😅"
+        },
+        {
+            "message": "Almost There!",
+            "type": "game/play",
+            "emoji": "🤞"
+        },
+        {
+            "message": "Slight Miss!",
+            "type": "game/play",
+            "emoji": "🙈"
+        },
+        {
+            "message": "Uh-Oh!",
+            "type": "game/play",
+            "emoji": "⚠️"
+        },
+        {
+            "message": "Not Quite Right!",
+            "type": "game/play",
+            "emoji": "❌"
+        },
+        {
+            "message": "Keep Trying!",
+            "type": "game/play",
+            "emoji": "🥺"
+        },
+        {
+            "message": "Missed It By That Much!",
+            "type": "game/play",
+            "emoji": "🤡"
+        }
+    ],
+    "headline": [
+        {
+            "message": "Great Job!",
+            "type": "game/complete",
+            "emoji": "🔥"
+        },
+        {
+            "message": "You Rock!",
+            "type": "game/complete",
+            "emoji": " 🤘"
+        },
+        {
+            "message": "Awesome!",
+            "type": "game/complete",
+            "emoji": "😎"
+        },
+        {
+            "message": "Nailed It!",
+            "type": "game/complete",
+            "emoji": "🎯"
+        },
+        {
+            "message": "Bravo!",
+            "type": "game/complete",
+            "emoji": "👏"
+        },
+        {
+            "message": "Wowza!",
+            "type": "game/complete",
+            "emoji": "💥"
+        },
+        {
+            "message": "Boom!",
+            "type": "game/complete",
+            "emoji": "💣"
+        },
+        {
+            "message": "Outstanding!",
+            "type": "game/complete",
+            "emoji": "🏆"
+        },
+        {
+            "message": "Sweet!",
+            "type": "game/complete",
+            "emoji": "🤤"
+        },
+        {
+            "message": "Yay!",
+            "type": "game/complete",
+            "emoji": "🙌"
+        }
+    ],
+    "callToAction": [
+        {
+            "message": "Up for a rematch?",
+            "type": "game/complete"
+        },
+        {
+            "message": "Ready for another round?",
+            "type": "game/complete"
+        },
+        {
+            "message": "Feel like shining again?",
+            "type": "game/complete"
+        },
+        {
+            "message": "Dare for a rematch?",
+            "type": "game/complete"
+        },
+        {
+            "message": "Wanna give it another shot?",
+            "type": "game/complete"
+        },
+        {
+            "message": "Ready for the challenge of a new game?",
+            "type": "game/complete"
+        },
+        {
+            "message": "Geared up for another play?",
+            "type": "game/complete"
+        },
+        {
+            "message": "Ready to beat your previous score?",
+            "type": "game/complete"
+        },
+        {
+            "message": "Up for another match?",
+            "type": "game/complete"
+        },
+        {
+            "message": "Feeling like a comeback?",
+            "type": "game/complete"
+        }
+    ]
+}

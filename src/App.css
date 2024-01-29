@@ -6,3 +6,28 @@ body {
   line-height: 1.5;
   text-align: left;
 }
+
+
+/*********** CARD ***********/
+
+.card__face--front::before{
+  content: "";
+  width: 148%;
+  height: 24%;
+  position: absolute;
+  background-color: rgb(255 255 255 / 10%);
+  left: -30%;
+  top: 20%;
+  transform: rotate(-40deg);
+}
+.card__face--front::after{
+  content: "";
+  width: 159%;
+  height: 7%;
+  position: absolute;
+  background-color: rgb(255 255 255 / 10%);
+  left: -30%;
+  top: 54%;
+  transform: rotate(-40deg);
+}
+
