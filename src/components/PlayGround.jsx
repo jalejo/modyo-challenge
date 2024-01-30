@@ -158,9 +158,9 @@ function PlayGround() {
   }
 
   return (
-    <div className="container mx-auto relative overflow-hidden ">
+    <div className="container mx-auto relative overflow-hidden p-2 pb-20">
       <div className="text-center mx-auto w-full max-w-80 sm:max-w-4xl flex justify-center">
-        <div className="w-40 mt-8 mb-2"><LogoFull /></div>
+        <div className="w-40 mt-8"><LogoFull /></div>
       </div>
       <ScoreBoard
         matches={matches}

@@ -13,7 +13,7 @@ const LabelMessage = memo(({ messagesList, labelMessage }) => {
         
         <div className={`
             ${ labelMessage ? 'animate-showToast' : '' }
-            absolute z-10 bottom-0 right-0 opacity-0 
+            fixed z-10 bottom-10 right-10 opacity-0 
             min-w-40 py-2 pr-6 pl-4 rounded-lg bg-black bg-opacity-80 
             flex items-center gap-x-3`}
         >

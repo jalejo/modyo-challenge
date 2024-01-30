@@ -38,9 +38,11 @@ const Card = ({ animal, handleCard }) => {
                     rounded-lg  overflow-hidden ring-1 ring-slate-300 shadow-lg
                     absolute w-full h-full bg-blue-challenge [backface-visibility:hidden] flex items-center justify-center
                 ">
-                    <LogoM 
-                        color='#FFFFFF'
-                    />
+                    <div className='mx-auto w-9/12 flex  justify-center'>
+                        <LogoM 
+                            color='#FFFFFF'
+                        />
+                    </div>
                 </div>
             </div>
         </div>

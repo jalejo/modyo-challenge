@@ -30,10 +30,10 @@ export default {
         showToast:{
           '0%':{ opacity:0, right:'-10rem', display:'none' },
           '1%':{ opacity:0, right:'-10rem', display:'flex' },
-          '20%':{ opacity:1, right:'0', display:'flex' },
-          '80%':{ opacity:1, right:'0', display:'flex' },
+          '20%':{ opacity:1, right:'2.5rem', display:'flex' },
+          '80%':{ opacity:1, right:'2.5rem', display:'flex' },
           '99%':{ opacity:0, right:'4rem', display:'flex' },
-          '100%':{ opacity:0, right:'0', display:'none' }
+          '100%':{ opacity:0, right:'2.5rem', display:'none' }
         },
         hideLogin:{
           '0%':{ transform: 'scale(1)', height: '100dvh' },
