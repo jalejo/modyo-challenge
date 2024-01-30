@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import { useUser } from '../../contexts/UserContext';
 
-import ArrowRight from './../../assets/img/ArrowRight.svg';
-
 const ScoreBoard = ({ matches, misses, userName } ) => {
 
     const { logoutUser } = useUser();
