@@ -79,7 +79,7 @@ function PlayGround() {
 
   useEffect(() => {
     resetAllMatch();
-  }, [ user.name ])
+  }, [ user ])
 
   const resetAllMatch = () => {
     setMatches( 0 );
