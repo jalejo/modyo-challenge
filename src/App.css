@@ -38,12 +38,12 @@ body {
 }
 
 .bg-circle.bg-circle__blue{
-  @apply bg-sky-300  ;
+  @apply bg-[#BEE0FF] sm:bg-sky-300  ;
 }
 .bg-circle.bg-circle__green{
   @apply bg-green-300  ;
 }
-
+ 
 .regular-bottom{
   @apply inline-block rounded-lg text-white  px-6 pb-2.5 pt-2.5 text-sm font-medium uppercase leading-normal
 }
