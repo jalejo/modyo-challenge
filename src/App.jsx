@@ -12,14 +12,14 @@ function App() {
   return (
 
     <UserProvider>
-      <div className='relative bg-dots-pattern overflow-hidden w-full h-lvh'>
+      <div className='relative bg-dots-pattern overflow-hidden w-full min-h-lvh'>
         <Login />
         <PlayGround />
 
         <div className='bg-circle bg-circle__blue -top-[25rem] -left-[25rem] w-[50rem]'></div>
         <div className='bg-circle bg-circle__green top-[10rem] left-[10rem] w-[20rem] '></div>
-        <div className='bg-circle bg-circle__blue -bottom-[25rem] -right-[25rem] w-[50rem]'></div>
-        <div className='bg-circle bg-circle__green bottom-[10rem] right-[10rem] w-[20rem]'></div>
+        <div className='bg-circle bg-circle__blue top-[25rem] -right-[25rem] w-[50rem]'></div>
+        <div className='bg-circle bg-circle__green top-[10rem] right-[10rem] w-[20rem]'></div>
       </div>
     </UserProvider>
 
