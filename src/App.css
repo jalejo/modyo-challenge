@@ -33,7 +33,7 @@ body {
 
 
 .bg-circle{
-  @apply absolute aspect-square rounded-full mix-blend-multiply bg-opacity-40 blur-[8rem];
+  @apply absolute rounded-full mix-blend-multiply bg-opacity-40 blur-[8rem];
   z-index: -1;
 }
 
