@@ -7,7 +7,7 @@ const CardsGrid = ({ animalsList, handleCard }) => {
        
         <div className="
             w-full max-w-80 sm:max-w-4xl mx-auto 
-            grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-4  
+            grid grid-cols-3 sm:grid-cols-6 gap-1 sm:gap-4  
         ">
         {
             animalsList.map((animal, index) => (

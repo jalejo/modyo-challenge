@@ -9,7 +9,7 @@ const ScoreBoard = ({ matches, misses, userName } ) => {
         <div className="
         grid grid-cols-2
         w-full max-w-80 sm:max-w-4xl mx-auto 
-        mb-8
+        mb-6 sm:mb-8
         ">
             <div>
                 <p className="text-xl font-semibold">Matches: {matches}</p>

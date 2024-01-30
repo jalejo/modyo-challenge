@@ -18,7 +18,7 @@ const animalsCardsUrl = "https://fed-team.modyo.cloud/api/content/spaces/animals
 
 function PlayGround() {
 
-  const { user } = useUser();
+  const { logoutUser, user } = useUser();
 
   const [animalsList, setAnimalsList] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null)
@@ -158,9 +158,9 @@ function PlayGround() {
   }
 
   return (
-    <div className="container mx-auto relative overflow-hidden p-2 pb-20">
+    <div className="container mx-auto relative overflow-hidden pt-4 sm:pt-8 pb-20">
       <div className="text-center mx-auto w-full max-w-80 sm:max-w-4xl flex justify-center">
-        <div className="w-40 mt-8"><LogoFull /></div>
+        <div className="w-32 sm:w-40"><LogoFull /></div>
       </div>
       <ScoreBoard
         matches={matches}
@@ -199,6 +199,7 @@ function PlayGround() {
             type="button"
             className="px-6 pb-2.5 pt-2.5 text-base font-medium leading-normal text-primary hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700 flex flex-col items-center rounded-lg
             hover:bg-gray-100 ease-in duration-300"
+            onClick={ ()=> logoutUser() }
           >
             <span className="uppercase text-sm ">Maybe later</span>
             <span className=" text-xs">[Logout]</span>
