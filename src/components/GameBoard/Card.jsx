@@ -14,6 +14,7 @@ const Card = ({ animal, handleCard }) => {
                 group [perspective:1000px]
             `}
             onClick={ () => ( handleCard( animal ) ) }
+            onTouchStart={ () => ( handleCard( animal ) ) }
         >
             <div 
                 className={`
