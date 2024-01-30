@@ -1,7 +1,6 @@
 # modyo-challenge
- Memory Game Challenge 
 
-Welcome to the Memory Game! This game will challenge your memory as you try to match the pairs of cards. Are you ready for the challenge?
+Welcome to the Match Modyo Game! This game will challenge your memory as you try to match the pairs of cards. Are you ready for the challenge?
 
 ## Instructions
 
@@ -15,6 +14,9 @@ Welcome to the Memory Game! This game will challenge your memory as you try to m
 
 ## Technologies Used
 
+- HTML
+- CSS
+- JS
 - React
 - Tailwind CSS
 
