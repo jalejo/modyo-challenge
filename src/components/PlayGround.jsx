@@ -191,6 +191,7 @@ function PlayGround() {
             type="button"
             className="regular-bottom regular-bottom__gradient"
             onClick={() => handleClose()}
+            onTouchStart={() => handleClose()}
           >
             Let&apos;s Do It
           </button>
@@ -200,6 +201,7 @@ function PlayGround() {
             className="px-6 pb-2.5 pt-2.5 text-base font-medium leading-normal text-primary hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700 flex flex-col items-center rounded-lg
             hover:bg-gray-100 ease-in duration-300"
             onClick={ ()=> logoutUser() }
+            onTouchStart={ ()=> logoutUser() }
           >
             <span className="uppercase text-sm ">Maybe later</span>
             <span className=" text-xs">[Logout]</span>

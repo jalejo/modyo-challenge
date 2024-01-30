@@ -54,6 +54,7 @@ const Login = () => {
                         type="button"
                         className="regular-bottom regular-bottom__gradient"
                         onClick={() => handleLogin()}
+                        onTouchStart={() => handleLogin()}
                     >
                         Let&apos;s Play
                     </button>
