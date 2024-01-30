@@ -31,3 +31,32 @@ body {
   transform: rotate(-40deg);
 }
 
+
+.bg-circle{
+  @apply absolute aspect-square rounded-full mix-blend-multiply bg-opacity-40 blur-[8rem];
+  z-index: -1;
+}
+
+.bg-circle.bg-circle__blue{
+  @apply bg-sky-300  ;
+}
+.bg-circle.bg-circle__green{
+  @apply bg-green-300  ;
+}
+
+.regular-bottom{
+  @apply inline-block rounded-lg text-white  px-6 pb-2.5 pt-2.5 text-sm font-medium uppercase leading-normal
+}
+
+.regular-bottom.regular-bottom__gradient{
+  @apply bg-gradient-to-r from-green-500 to-sky-500;
+  background-size: 150% 100%;
+  transition: all 350ms ease-out;
+  background-position: 50% 0%;
+  
+}
+
+.regular-bottom.regular-bottom__gradient:hover{
+  background-position: 0% 0;
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}

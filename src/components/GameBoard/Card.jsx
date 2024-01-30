@@ -10,7 +10,7 @@ const Card = ({ animal, handleCard }) => {
                 card
                 ${ animal.flipped ? 'card-flipped ' : '' }
                 ${ animal.matched ? 'grayscale' : '' }
-                w-full aspect-[1/1.25] card-wrapper
+                w-full aspect-[1/1.25] card-wrapper cursor-pointer
                 group [perspective:1000px]
             `}
             onClick={ () => ( handleCard( animal ) ) }

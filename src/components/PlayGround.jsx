@@ -1,18 +1,24 @@
 import { useEffect, useState } from "react";
 
+import { useUser } from "../contexts/UserContext";
+
 import CardsGrid from './GameBoard/CardsGrid'
 import ScoreBoard from './GameBoard/ScoreBoard';
 import LabelMessage from './Elements/LabelMessage';
 import Modal from './Elements/Modal';
 
+
 import messagesList from './../assets/messages.json'
 
 import { shuffleCards } from './../utils/helpers';
+import LogoFull from "../assets/LogoFull";
 
 
 const animalsCardsUrl = "https://fed-team.modyo.cloud/api/content/spaces/animals/types/game/entries?per_page=20"
 
-function PlayGround({ userName }) {
+function PlayGround() {
+
+  const { user } = useUser();
 
   const [animalsList, setAnimalsList] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null)
@@ -21,19 +27,12 @@ function PlayGround({ userName }) {
   const [misses, setMisses] = useState(0);
   const [labelMessage, setLabelMessage] = useState(null);
   const [open, setOpen] = useState(false);
-  const [finishedGame, setFinishedGame] = useState(false);
   const [modalMessage, setModalMessage] = useState({
     emoji: '',
     headline: '',
     cta: ''
   });
 
-
-  const resetAllMatch = () => {
-    setMatches( 0 );
-    setMisses ( 0 );
-    getCards();
-  }
 
   const handleClose = () => {
     open && setOpen(false);
@@ -79,9 +78,20 @@ function PlayGround({ userName }) {
   }, [])
 
   useEffect(() => {
+    resetAllMatch();
+  }, [ user ])
+
+  const resetAllMatch = () => {
+    setMatches( 0 );
+    setMisses ( 0 );
+    setLabelMessage(null);
+    getCards();
+  }
+  
+  useEffect(() => {
     
     if (matches >= 9 ) {
-      setFinishedGame(true);
+    
       setOpen(true);
 
       let completeHeadline = messagesList["headline"];
@@ -100,6 +110,7 @@ function PlayGround({ userName }) {
    
     }
   }, [matches]);
+
 
   const handleCard = animal => {
 
@@ -140,14 +151,21 @@ function PlayGround({ userName }) {
     }
   }
 
+  
+
+  if (!user) {
+    return false;
+  }
 
   return (
-    <div className="container mx-auto relative">
-      <h1>Match Modyo</h1>
+    <div className="container mx-auto relative overflow-hidden ">
+      <div className="text-center mx-auto w-full max-w-80 sm:max-w-4xl flex justify-center">
+        <div className="w-40 mt-8 mb-2"><LogoFull /></div>
+      </div>
       <ScoreBoard
         matches={matches}
         misses={misses}
-        userName={ userName }
+        userName={ user?.name }
       />
       <LabelMessage
         labelMessage={labelMessage}
@@ -165,29 +183,25 @@ function PlayGround({ userName }) {
       >
 
         <h3>{ modalMessage.emoji +" "+ modalMessage.headline }</h3>
-        <h2 className="mb-6">{ userName  }</h2>
-        <p className="mb-3">{  modalMessage.cta }</p>
+        <h2 className="mb-6">{ user?.name  }</h2>
+        <p className="mb-6">{  modalMessage.cta }</p>
         
         <div className="flex justify-center gap-x-3">
           <button
             type="button"
-            className="
-              inline-block rounded 
-              bg-blue-challenge hover:bg-blue-challenge-hover text-white 
-              px-6 pb-2 pt-2.5 
-              text-base font-medium uppercase leading-normal 
-              
-            "
+            className="regular-bottom regular-bottom__gradient"
             onClick={() => handleClose()}
           >
-            Let's Do It
+            Let&apos;s Do It
           </button>
 
           <button
             type="button"
-            className="inline-block rounded px-2 pb-2 pt-2.5 text-base font-medium uppercase leading-normal text-primary hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700"
+            className="px-6 pb-2.5 pt-2.5 text-base font-medium leading-normal text-primary hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700 flex flex-col items-center rounded-lg
+            hover:bg-gray-100 ease-in duration-300"
           >
-            Maybe later
+            <span className="uppercase text-sm ">Maybe later</span>
+            <span className=" text-xs">[Logout]</span>
           </button>
         </div>
 

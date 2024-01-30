@@ -9,10 +9,9 @@ export default {
       padding:  '1.5rem',
     },
     extend: {
-
       colors: {
         'green-challenge':'#0EBD74',
-        'blue-challenge':'#151F38',
+        'blue-challenge':'#132D46',
         'blue-challenge-hover':'#2a3550'
       },
       fontFamily:{
@@ -20,28 +19,31 @@ export default {
       },
 
       animation:{
-        fadeIn: 'fadeIn',
-        fadeOut: 'fadeOut',
-        scaleIn: 'scaleIn',
-        scaleOut: 'scaleOut'
+        showToast: 'showToast 2s ease-in-out',
+        hideLogin: 'hideLogin 1s ease-in-out',
+        showLogin: 'showLogin 1s ease-in-out',
       },
-
+      backgroundImage: {
+        'dots-pattern':"url(./assets/img/dots-bgr.png)",
+      },
       keyframes:{
-        fadeIn:{
-          '0%':{ opacity:0 },
-          '100%':{ opacity:1 }
+        showToast:{
+          '0%':{ opacity:0, right:'-10rem', display:'none' },
+          '1%':{ opacity:0, right:'-10rem', display:'flex' },
+          '20%':{ opacity:1, right:'0', display:'flex' },
+          '80%':{ opacity:1, right:'0', display:'flex' },
+          '99%':{ opacity:0, right:'4rem', display:'flex' },
+          '100%':{ opacity:0, right:'0', display:'none' }
         },
-        fadeOut:{
-          '0%':{ opacity:1 },
-          '100%':{ opacity:0 }
+        hideLogin:{
+          '0%':{ transform: 'scale(1)', height: '100dvh' },
+          '35%':{  transform: 'scale(0)', height: '100dvh'  },
+          '100%':{  transform: 'scale(0)', height: '0dvh'  }
         },
-        scaleIn:{
-          '0%':{ transform : 'scale(0)' },
-          '100%':{ transform : 'scale(1)' }
-        },
-        scaleOut:{
-          '0%':{ transform : 'scale(1)' },
-          '100%':{ transform : 'scale(0)' }
+        showLogin:{
+          '0%':{ transform: 'scale(0)', height: '0dvh' },
+          '35%':{  transform: 'scale(1)', height: '100dvh'  },
+          '100%':{  transform: 'scale(1)', height: '100dvh'  }
         }
       }
     },

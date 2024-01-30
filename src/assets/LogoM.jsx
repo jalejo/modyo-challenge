@@ -1,6 +1,6 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-function LogoM({ color = '#000000'}) {
+const LogoM = ({ color = '#000000'}) =>  {
 
     const iconStyles = {
         fill: color,
@@ -14,5 +14,9 @@ function LogoM({ color = '#000000'}) {
         </svg>
     );
     }
+
+    LogoM.propTypes = {
+        color: PropTypes.string,
+    };
 
 export default LogoM;

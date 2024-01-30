@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
-const Modal = ({ open, handleClose, children }) => {
+const Modal = ({ open, children }) => {
 
     const [showOverflow, setShowOverflow ] = useState(open)
 
@@ -25,14 +25,14 @@ const Modal = ({ open, handleClose, children }) => {
             ${open ? 'modal-open opacity-100' : 'opacity-0' }
             transition-opacity ease-in-out duration-500
             justify-center items-center
-            fixed inset-0 bg-gray-700 bg-opacity-75`
+            fixed inset-0 bg-gray-700 bg-opacity-75 z-10 `
         }
         //onClick={handleClose}
         >
             <div className={ 
                 `${open ? 'scale-100' : 'scale-0' }
                 transform transition-all ease-in-out duration-300
-                inline-block px-2 py-6 text-center
+                inline-block px-2 pt-6 pb-8 text-center
                 w-full max-w-80 sm:max-w-md
                 bg-white rounded-lg overflow-hidden shadow-xl 
                 `
